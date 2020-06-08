@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body style="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style style=""> body {
+                                                                                                                                                                                              font-family: 'Roboto', Roboto;
+                                                                                                                                                                                                font-size: 20px;
+                                                                                                                                                                                              }
+                                                                                           #bg {
+                                                                                                      background: url("origeditside.jpg") no-repeat center center;
+                                                                                                      height: 700px;
+                                                                                                      background-size: 100% auto;
+                                                                                                    }
+                                                                                                
+                                                                                                    .navbar-default .navbar-brand {
+                                                                                                      color: #FFF;
+                                                                                                    }
+                                                                                                .mySlides {
+                                                                                              display: none
+                                                                                            }
+                                                                                        
+                                                                                            .demo {
+                                                                                              cursor: pointer
+                                                                                            }
+                                                                                                    img[usemap] {
+                                                                                                      border: none;
+                                                                                                      height: auto;
+                                                                                                      max-width: 100%;
+                                                                                                      width: auto;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover {
+                                                                                                      background-color: lightblue;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover.bottom .arrow::after {
+                                                                                                      border-bottom-color: lightblue;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover-content {
+                                                                                                      background-color: lightblue;
+                                                                                                    }
+    #album1 {
+      display: none;
+    }
+    #album1cart {
+      display: none;
+    }
+    #album1add {
+      display: none;
+    }
+     #album2 {
+      display: none;
+    }
+    #album2cart {
+      display: none;
+    }
+    #album2add {
+      display: none;
+    }
+ 		#album3 {
+      display: none;
+    }
+    #album3cart {
+      display: none;
+    }
+    #album3add {
+      display: none;
+    }
+    </style>
+  <div class="cover">
+    <div class="cover-image" style="background-image : url('assets/downloadbg.jpg')"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br>
+          <br>
+          <span style="font-weight: bold; color: white; font-size: 50px; font-family: Roboto, Roboto;">DOWNLOADS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url( 'assets/peach.jpg') " id="downloadshop">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album1.jpg" class="center-block img-square img-responsive">
+          <h3 class="text-center">Love Yourself and Music</h3>
+          <button style="background-image : url( 'assets/rose.jpg')" onclick="viewalbum1()">
+            <font color="FFFFFF ">VIEW ALBUM</font>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <img src="assets\album2.jpg" class="center-block img-square img-responsive">
+          <h3 class="text-center">School Music Affairs </h3>
+          <button style="background-image : url( 'assets/rose.jpg')" onclick="viewalbum2()">
+            <font color="FFFFFF ">VIEW ALBUM</font>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <img src="assets\album3.jpg" class="center-block img-square img-responsive">
+          <h3 class="text-center">Wings of Music</h3>
+          <button style="background-image : url( 'assets/rose.jpg')" onclick="viewalbum3()">
+            <font color="FFFFFF ">VIEW ALBUM</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/rose.jpg&quot;);" id="album1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album1.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+          <h1>Love Yourself and Music</h1>
+          <h2>Price: $35.00</h2>
+          <h3>Song List:</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Summer Day</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Silver Forks</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Waste it on Us</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Fake Lovers</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. The Paradise</h3>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="buyalbum1cart()">
+            <font color="FFFFFF ">ADD TO CART</font>
+          </button>
+          <h2 id="album1add"> Added! </h2>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="closealbum1()">
+            <font color="FFFFFF ">Close</font>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1>Summer Day</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/mhv2QfhwC00" allowfullscreen="" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/rose.jpg&quot;);" id="album3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album3.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+          <h1>Wings of Music</h1>
+          <h2>Price: $35.00</h2>
+          <h3>Song List:</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. RNA</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Anpanwoman</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Love Puzzle</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Magic Store</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. MIC Pick-Up</h3>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="buyalbum3cart()">
+            <font color="FFFFFF ">ADD TO CART</font>
+          </button>
+          <h2 id="album3add"> Added! </h2>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="closealbum3()">
+            <font color="FFFFFF ">Close</font>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1>Love Puzzle</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/mhv2QfhwC00" allowfullscreen="" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/rose.jpg&quot;);" id="album2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album2.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+          <h1>School Music Affairs</h1>
+          <h2>Price: $35.00</h2>
+          <h3>Song List:</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Miss Wrong</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Girl in Love</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;Blood, Sweat Tears, and Hard Work</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;Cypher: Part Music</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Where You Going </h3>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="buyalbum2cart()">
+            <font color="FFFFFF ">ADD TO CART</font>
+          </button>
+          <h2 id="album2add"> Added! </h2>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="closealbum2()">
+            <font color="FFFFFF ">Close</font>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1>Cypher: Part Music</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/mhv2QfhwC00" allowfullscreen="" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span>
+            <font color="FFFFFF">Home</font>
+          </span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="#" data-toggle="dropdown">About</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="biography.html">Biography</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown">Live Tours</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="tours-dates-tickets.html">Tour Dates and Tickets</a>
+              </li>
+              <li>
+                <a href="book-trinity.html">Book</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="merchandise.html">Merchandise</a>
+              </li>
+              <li>
+                <a href="downloads.html">Downloads</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown">BRHS TSA</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="">
+              <li>
+                <a href="about-chapter.html">About Chapter</a>
+              </li>
+              <li>
+                <a href="stem-courses.html">STEM Courses</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemelectives">STEM Electives</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemclubs">STEM Clubs</a>
+              </li>
+              <li>
+                <a href="club-advisor.html">Club Advisor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-secondary" style="background-image : url('assets/gray.jpg') " id="cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <font color="FFFFFF ">
+            <h2>CART</h2>
+          </font>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="album1cart" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\album1.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Love Yourself and Music </h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletealbum1cart()">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="album2cart" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\album2.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>School Music Affairs </h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletealbum2cart()">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="album3cart" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\album3.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Wings of Music </h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletealbum3cart()">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script style="">
+    function viewalbum1() {
+      var x = document.getElementById("album1");
+      x.style.display = "block";
+    }
+
+    function closealbum1() {
+      var x = document.getElementById("album1");
+      x.style.display = "none";
+    }
+
+    function buyalbum1cart() {
+      var x = document.getElementById("album1cart");
+      x.style.display = "block";
+      var y = document.getElementById("album1add");
+      y.style.display = "block";
+      var y = document.getElementById("emptycart");
+      y.style.display = "none";
+    }
+
+    function deletealbum1cart() {
+      var x = document.getElementById("album1cart");
+      x.style.display = "none";
+      var y = document.getElementById("album1add");
+      y.style.display = "none";
+    }
+
+    function viewalbum2() {
+      var x = document.getElementById("album2");
+      x.style.display = "block";
+    }
+
+    function closealbum2() {
+      var x = document.getElementById("album2");
+      x.style.display = "none";
+    }
+
+    function buyalbum2cart() {
+      var x = document.getElementById("album2cart");
+      x.style.display = "block";
+      var y = document.getElementById("album2add");
+      y.style.display = "block";
+      var y = document.getElementById("emptycart");
+      y.style.display = "none";
+    }
+
+    function deletealbum2cart() {
+      var x = document.getElementById("album2cart");
+      x.style.display = "none";
+      var y = document.getElementById("album2add");
+      y.style.display = "none";
+    }
+
+    function viewalbum3() {
+      var x = document.getElementById("album3");
+      x.style.display = "block";
+    }
+
+    function closealbum3() {
+      var x = document.getElementById("album3");
+      x.style.display = "none";
+    }
+
+    function buyalbum3cart() {
+      var x = document.getElementById("album3cart");
+      x.style.display = "block";
+      var y = document.getElementById("album3add");
+      y.style.display = "block";
+      var y = document.getElementById("emptycart");
+      y.style.display = "none";
+    }
+
+    function deletealbum3cart() {
+      var x = document.getElementById("album3cart");
+      x.style.display = "none";
+      var y = document.getElementById("album3add");
+      y.style.display = "none";
+    }
+  </script>
+  <div class="text-center" style="background-image : url('assets/gray.jpg') ">
+    <br>
+    <div class="col-md-4"></div>
+    <div class="col-md-1">
+      <a href="mailto:trinityfanmail@gmail.com" target="_blank " class="fa fa-envelope w-100 h-100 fa-4x" style="color:darkblue"></a>
+    </div>
+    <div class="col-md-1">
+      <a href="https://www.instagram.com/awkwardpellas/?hl=en" style="color:lightcoral" class="fa fa-instagram w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.nj.com/messenger-gazette/2017/04/winners_of_young_artist_competition_to_perform_at_carnegie_hall_on_friday.html" style="color:black" class="fa fa-newspaper-o w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.youtube.com/channel/UCEcT58Cql2YfCD7Ha2EBs1w" class="fa fa-youtube-play w-100 h-100 fa-4x" style="color:red" target="_blank "></a></div>
+    <br>
+    <br>
+    <br><br>
+  </div>
+  <footer style="background-image : url('assets/black.jpg') " class="section ">
+    <div class="container ">
+      <div class="row ">
+        <div class="col-sm-6 col-md-12 ">
+          <div class="section ">
+            <div class="container ">
+              <div class="row ">
+                <div class="col-md-12 text-center">
+                  <h2>
+                    <a href="index.html">
+                      <font color="FFFFFF ">Home</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="biography.html">
+                      <font color="FFFFFF ">About</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="tours-dates-tickets.html">
+                      <font color="FFFFFF ">Tours</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html">
+                      <font color="FFFFFF ">Shop</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html#cart">
+                      <font color="FFFFFF ">Cart</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="about-chapter.html">
+                      <font color="FFFFFF ">BRHS TSA</font>
+                    </a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>

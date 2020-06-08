@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body style="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <style style=""> body {
+                                                                                                                                                                                              font-family: 'Roboto', Roboto;
+                                                                                                                                                                                                font-size: 20px;
+                                                                                                                                                                                              }
+                                                                                           #bg {
+                                                                                                      background: url("origeditside.jpg") no-repeat center center;
+                                                                                                      height: 700px;
+                                                                                                      background-size: 100% auto;
+                                                                                                    }
+                                                                                                
+                                                                                                    .navbar-default .navbar-brand {
+                                                                                                      color: #FFF;
+                                                                                                    }
+                                                                                                .mySlides {
+                                                                                              display: none
+                                                                                            }
+                                                                                        
+                                                                                            .demo {
+                                                                                              cursor: pointer
+                                                                                            }
+                                                                                                    img[usemap] {
+                                                                                                      border: none;
+                                                                                                      height: auto;
+                                                                                                      max-width: 100%;
+                                                                                                      width: auto;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover {
+                                                                                                      background-color: lightblue;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover.bottom .arrow::after {
+                                                                                                      border-bottom-color: lightblue;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover-content {
+                                                                                                      background-color: lightblue;
+                                                                                                    }
+    #buytour1 {
+      display: none;
+    }
+    #buytour2 {
+      display: none;
+    }
+    #buytour3 {
+      display: none;
+    }
+    #buytour4 {
+      display: none;
+    }
+    #buytour5 {
+      display: none;
+    }
+    #ordertickets {
+    	display: none;
+    }
+    #ordermessage {
+    	display: none;
+    }
+    </style>
+  <div class="cover">
+    <div class="cover-image" style="background-image : url('assets/tourbg.jpeg')"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br>
+          <br>
+          <div class="wow zoomIn" style="visibility: visible;">
+            <span style="font-weight: bold; color: white; font-size: 50px; font-family: Roboto, Roboto;">LIVE TOURS</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" style="background-image : url('assets/rose.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <br>
+          <h1 class="text-center">
+            <font color="FFFFFF ">
+              <div class="wow fadeInUp" style="visibility: visible;">
+                <span style="font-weight: bold; color: white; font-size: 45px; font-family: Roboto, Roboto;">2019 US NATIONAL TOUR</span></div>
+            </font>
+          </h1>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') " id="viewtours">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <br>
+            <img src="assets/tour1.jpg" class="img-responsive" height="100%" width="100%">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="col-md-4 text-center">
+            <h2 class="text-center"> DOLBY THEATRE LOS ANGELES, CA </h2>
+            <h3 class="text-center">November 24 - December 14</h3>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buytourtick1()">
+              <font color="FFFFFF ">BUY TICKETS</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="buytour1" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="text-center"> Dates and Times </h2>
+          <h3>Sunday, November 24 ................................ 8:00 AM</h3>
+          <h3>Sunday, December 1 .................................. 8:00 PM</h3>
+          <h3>Friday, December 6 .................................. 10:00 PM</h3>
+          <h3>Saturday, December 14 ............................ 11:00 AM</h3>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center"> Costs </h2>
+          <h3>$79.99 ................................................... 10 and over</h3>
+          <h3>$49.99 ................................................. 10 and under</h3>
+          <h3>Free ...................................................... 2 and under</h3>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-12">
+        <h2> Group Reservations </h2>
+        <h3> For group reservations of 17 or more guests to a single performance date, please call 732-459-7434. </h3>
+        <h2> Disclaimer </h2>
+        <h3> All ticket sales are final. No refunds or exchanges will be allowed on ticket sales. </h3>
+        <h2> Age Requirements </h2>
+        <h3> Guests under the age of 18 must be accompanied by an adult. </h3>
+        <br>
+      </div>
+      <a href="tours-dates-tickets.html#ordertickets">
+        <button style="background-image : url( 'assets/black.jpg')" onclick="ordertickets()">
+          <font color="FFFFFF ">Order</font>
+        </button></a>
+      <button style="background-image : url( 'assets/black.jpg')" onclick="canceltourtick1()">
+        <font color="FFFFFF ">Cancel</font>
+      </button>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <img src="assets/tour2.jpg" class="img-responsive" height="100%" width="100%">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="col-md-4 text-center">
+            <h2 class="text-center"> JORDAN HALL BOSTON, MA</h2>
+            <h3 class="text-center">May 23 - May 28</h3>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buytourtick2()">
+              <font color="FFFFFF ">BUY TICKETS</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="buytour2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="text-center"> Dates and Times </h2>
+          <h3>Sunday, May 23 .......................................... 7:30 PM</h3>
+          <h3>Tuesday, May 25 ........................................ 9:30 PM</h3>
+          <h3>Friday, May 26 .......................................... 11:30 AM</h3>
+          <h3>Saturday, May 28 ....................................... 4:30 PM</h3>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center"> Costs </h2>
+          <h3>$69.99 ................................................... 10 and over</h3>
+          <h3>$39.99 ................................................. 10 and under</h3>
+          <h3>Free ...................................................... 2 and under</h3>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-12">
+        <h2> Group Reservations </h2>
+        <h3> For group reservations of 17 or more guests to a single performance date, please call 732-459-7434. </h3>
+        <h2> Disclaimer </h2>
+        <h3> All ticket sales are final. No refunds or exchanges will be allowed on ticket sales. </h3>
+        <h2> Age Requirements </h2>
+        <h3> Guests under the age of 18 must be accompanied by an adult. </h3>
+        <br>
+      </div>
+      <a href="tours-dates-tickets.html#ordertickets">
+        <button style="background-image : url( 'assets/black.jpg')" onclick="ordertickets()">
+          <font color="FFFFFF ">Order</font>
+        </button></a>
+      <button style="background-image : url( 'assets/black.jpg')" onclick="canceltourtick2()">
+        <font color="FFFFFF ">Cancel</font>
+      </button>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <img src="assets/tour3.jpg" class="img-responsive" height="100%" width="100%">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="col-md-4 text-center">
+            <h2 class="text-center"> WORTHAM THEATER CENTER HOUSTON</h2>
+            <h3 class="text-center">January 2 - January 6</h3>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buytourtick3()">
+              <font color="FFFFFF ">BUY TICKETS</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="buytour3" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="text-center"> Dates and Times </h2>
+          <h3>Sunday, January 2 ...................................... 1:30 PM</h3>
+          <h3>Tuesday, January 3 .................................... 6:30 PM</h3>
+          <h3>Friday, January 4 ........................................ 9:30 PM</h3>
+          <h3>Saturday, January 6 ................................. 10:00 AM</h3>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center"> Costs </h2>
+          <h3>$59.99 ................................................... 10 and over</h3>
+          <h3>$29.99 ................................................. 10 and under</h3>
+          <h3>Free ...................................................... 2 and under</h3>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-12">
+        <h2> Group Reservations </h2>
+        <h3> For group reservations of 17 or more guests to a single performance date, please call 732-459-7434. </h3>
+        <h2> Disclaimer </h2>
+        <h3> All ticket sales are final. No refunds or exchanges will be allowed on ticket sales. </h3>
+        <h2> Age Requirements </h2>
+        <h3> Guests under the age of 18 must be accompanied by an adult. </h3>
+        <br>
+      </div>
+      <a href="tours-dates-tickets.html#ordertickets">
+        <button style="background-image : url( 'assets/black.jpg')" onclick="ordertickets()">
+          <font color="FFFFFF ">Order</font>
+        </button></a>
+      <button style="background-image : url( 'assets/black.jpg')" onclick="canceltourtick3()">
+        <font color="FFFFFF ">Cancel</font>
+      </button>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <img src="assets/tour4.jpg" class="img-responsive" height="100%" width="100%">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="col-md-4 text-center">
+            <h2 class="text-center"> FOX THEATRE ATLANTA</h2>
+            <h3 class="text-center">August 9 - August 15</h3>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buytourtick4()">
+              <font color="FFFFFF ">BUY TICKETS</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="buytour4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="text-center"> Dates and Times </h2>
+          <h3>Sunday, August 9 ....................................... 9:30 PM</h3>
+          <h3>Tuesday, August 11 .................................... 4:00 PM</h3>
+          <h3>Friday, August 14 ...................................... 5:00 PM</h3>
+          <h3>Saturday, August 15 ................................... 7:30 PM</h3>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center"> Costs </h2>
+          <h3>$59.99 ................................................... 10 and over</h3>
+          <h3>$39.99 ................................................. 10 and under</h3>
+          <h3>Free ...................................................... 2 and under</h3>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-12">
+        <h2> Group Reservations </h2>
+        <h3> For group reservations of 17 or more guests to a single performance date, please call 732-459-7434. </h3>
+        <h2> Disclaimer </h2>
+        <h3> All ticket sales are final. No refunds or exchanges will be allowed on ticket sales. </h3>
+        <h2> Age Requirements </h2>
+        <h3> Guests under the age of 18 must be accompanied by an adult. </h3>
+        <br>
+      </div>
+      <a href="tours-dates-tickets.html#ordertickets">
+        <button style="background-image : url( 'assets/black.jpg')" onclick="ordertickets()">
+          <font color="FFFFFF ">Order</font>
+        </button></a>
+      <button style="background-image : url( 'assets/black.jpg')" onclick="canceltourtick4()">
+        <font color="FFFFFF ">Cancel</font>
+      </button>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <img src="assets/tour5-1.jpg" class="img-responsive" height="20%" width="100%">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="col-md-4 text-center">
+            <h2 class="text-center"> CARNEGIE HALL NEW YORK</h2>
+            <h3 class="text-center">June 9 - June 15</h3>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buytourtick5()">
+              <font color="FFFFFF ">BUY TICKETS</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div id="buytour5" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="text-center"> Dates and Times </h2>
+          <h3>Sunday, June 9 ........................................... 7:30 PM</h3>
+          <h3>Tuesday, June 11 ....................................... 8:30 PM</h3>
+          <h3>Friday, June 14 ........................................... 7:30 PM</h3>
+          <h3>Saturday, July 15 ........................................ 9:30 PM</h3>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center"> Costs </h2>
+          <h3>$79.99 ................................................... 10 and over</h3>
+          <h3>$49.99 ................................................. 10 and under</h3>
+          <h3>Free ...................................................... 2 and under</h3>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-12">
+        <h2> Group Reservations </h2>
+        <h3> For group reservations of 17 or more guests to a single performance date, please call 732-459-7434. </h3>
+        <h2> Disclaimer </h2>
+        <h3> All ticket sales are final. No refunds or exchanges will be allowed on ticket sales. </h3>
+        <h2> Age Requirements </h2>
+        <h3> Guests under the age of 18 must be accompanied by an adult. </h3>
+        <br>
+      </div>
+      <a href="tours-dates-tickets.html#ordertickets">
+        <button style="background-image : url( 'assets/black.jpg')" onclick="ordertickets()">
+          <font color="FFFFFF ">Order</font>
+        </button></a>
+      <button style="background-image : url( 'assets/black.jpg')" onclick="canceltourtick5()">
+        <font color="FFFFFF ">Cancel</font>
+      </button>
+    </div>
+  </div>
+  <div class="py-5 text-center" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);" id="ordertickets">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-12 col-10" style="">
+          <br><br><br>
+          <h1>ORDER YOUR TICKETS</h1>
+          <br>
+          <p class="mb-3">You must be 18+ years old to order and all children must me accompanied by an adult.</p><br>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"> <label for="form18">Valid Email Address</label> <input type="email" class="form-control" id="form18" placeholder="abc@gmail.com"> </div>
+            <div class="col-md-12">
+              <h3> Tour Location: <select>
+                  <option value="1">DOLBY THEATRE LOS ANGELES, CA </option>
+                  <option value="2">JORDAN HALL BOSTON, MA</option>
+                  <option value="3">WORTHAM THEATER CENTER HOUSTON</option>
+                  <option value="4">FOX THEATRE ATLANTA</option>
+                  <option value="5">CARNEGIE HALL NEW YORK</option>
+                </select>
+              </h3>
+            </div>
+            <br>
+            <div class="col-md-12">
+              <div class="form-group"> <label for="form17">Tour Date and Time</label> <input type="text" class="form-control" id="form17" placeholder="Sunday, June 9 7:30 PM" style=""> </div>
+            </div>
+            <div class="col-md-6">
+              <h3> Number of Adult Tickets: <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                </select>
+              </h3>
+            </div>
+            <div class="col-md-6">
+              <h3> Number of Child Tickets: <select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </h3>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-left"><button style="background-image: url(&quot;assets/black.jpg&quot;);" onclick="purchasetickets()">
+            <font color="FFFFFF ">Purchase</font>
+          </button></div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);" id="ordermessage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Tickets Successfully Purchased</h1>
+          <h2> Thank you for ordering! A receipt of your purchase has been sent to your email. If you did not receive an email, please call 732-459-7434.</h2>
+          <h2> See more <a href="tours-dates-tickets.html#viewtours" style="color:midnightblue">tours</a>. </h2>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span>
+            <font color="FFFFFF">Home</font>
+          </span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="biography.html">Biography</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">Live Tours</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="tours-dates-tickets.html">Tour Dates and Tickets</a>
+              </li>
+              <li>
+                <a href="messageboard.html">Message Board</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">Shop</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="merchandise.html">Merchandise</a>
+              </li>
+              <li>
+                <a href="merchandise.html#downloads">Downloads</a>
+              </li>
+              <li>
+                <a href="merchandise.html#cart">Cart</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">BRHS TSA</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="about-chapter.html">About Chapter</a>
+              </li>
+              <li>
+                <a href="stem-courses.html">STEM Courses</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemelectives">STEM Electives</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemclubs">STEM Clubs</a>
+              </li>
+              <li>
+                <a href="club-advisor.html">Club Advisor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script style="">
+    function buytourtick1() {
+      var x = document.getElementById("buytour1");
+      x.style.display = "block";
+    }
+
+    function canceltourtick1() {
+      var x = document.getElementById("buytour1");
+      x.style.display = "none";
+    }
+
+    function buytourtick2() {
+      var x = document.getElementById("buytour2");
+      x.style.display = "block";
+    }
+
+    function canceltourtick2() {
+      var x = document.getElementById("buytour2");
+      x.style.display = "none";
+    }
+
+    function buytourtick3() {
+      var x = document.getElementById("buytour3");
+      x.style.display = "block";
+    }
+
+    function canceltourtick3() {
+      var x = document.getElementById("buytour3");
+      x.style.display = "none";
+    }
+
+    function buytourtick4() {
+      var x = document.getElementById("buytour4");
+      x.style.display = "block";
+    }
+
+    function canceltourtick4() {
+      var x = document.getElementById("buytour4");
+      x.style.display = "none";
+    }
+
+    function buytourtick5() {
+      var x = document.getElementById("buytour5");
+      x.style.display = "block";
+    }
+
+    function canceltourtick5() {
+      var x = document.getElementById("buytour5");
+      x.style.display = "none";
+    }
+
+    function ordertickets() {
+      var x = document.getElementById("ordertickets");
+      x.style.display = "block";
+      var y = document.getElementById("ordermessage");
+      y.style.display = "none";
+    }
+
+    function purchasetickets() {
+      var x = document.getElementById("ordertickets");
+      x.style.display = "none";
+      var y = document.getElementById("ordermessage");
+      y.style.display = "block";
+      var a = document.getElementById("buytour1");
+      a.style.display = "none";
+      var b = document.getElementById("buytour2");
+      b.style.display = "none";
+      var c = document.getElementById("buytour3");
+      c.style.display = "none";
+      var d = document.getElementById("buytour4");
+      d.style.display = "none";
+      var e = document.getElementById("buytour5");
+      e.style.display = "none";
+    }
+  </script>
+  <div class="text-center" style="background-image : url('assets/gray.jpg') ">
+    <br>
+    <div class="col-md-4"></div>
+    <div class="col-md-1">
+      <a href="mailto:trinityfanmail@gmail.com" target="_blank " class="fa fa-envelope w-100 h-100 fa-4x" style="color:darkblue"></a>
+    </div>
+    <div class="col-md-1">
+      <a href="https://www.instagram.com/awkwardpellas/?hl=en" style="color:lightcoral" class="fa fa-instagram w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.nj.com/messenger-gazette/2017/04/winners_of_young_artist_competition_to_perform_at_carnegie_hall_on_friday.html" style="color:black" class="fa fa-newspaper-o w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.youtube.com/channel/UCEcT58Cql2YfCD7Ha2EBs1w" class="fa fa-youtube-play w-100 h-100 fa-4x" style="color:red" target="_blank "></a></div>
+    <br>
+    <br>
+    <br><br>
+  </div>
+  <footer style="background-image : url('assets/black.jpg') " class="section ">
+    <div class="container ">
+      <div class="row ">
+        <div class="col-sm-6 col-md-12 ">
+          <div class="section ">
+            <div class="container ">
+              <div class="row ">
+                <div class="col-md-12 text-center">
+                  <h2>
+                    <a href="index.html">
+                      <font color="FFFFFF ">Home</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="biography.html">
+                      <font color="FFFFFF ">About</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="tours-dates-tickets.html">
+                      <font color="FFFFFF ">Tours</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html">
+                      <font color="FFFFFF ">Shop</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html#cart">
+                      <font color="FFFFFF ">Cart</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="about-chapter.html">
+                      <font color="FFFFFF ">BRHS TSA</font>
+                    </a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js">
+  </script>
+  <script>
+    var wow = new WOW({
+      boxClass: 'wow', // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset: 0, // distance to the element when triggering the animation (default is 0)
+      mobile: true, // trigger animations on mobile devices (default is true)
+      live: true, // act on asynchronously loaded content (default is true)
+      callback: function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null, // optional scroll container selector, otherwise use window,
+      resetAnimation: true, // reset animation on end (default is true)
+    });
+    wow.init();
+  </script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>

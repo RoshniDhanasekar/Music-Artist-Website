@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <style> body {
+                                                                                                                                              font-family: 'Roboto', Roboto;
+                                                                                                                                                font-size: 20px;
+                                                                                                                                              }
+                                           #bg {
+                                                      background: url("origeditside.jpg") no-repeat center center;
+                                                      height: 700px;
+                                                      background-size: 100% auto;
+                                                    }
+                                                
+                                                    .navbar-default .navbar-brand {
+                                                      color: #FFF;
+                                                    }
+                                                
+                                                    img[usemap] {
+                                                      border: none;
+                                                      height: auto;
+                                                      max-width: 100%;
+                                                      width: auto;
+                                                    }
+                                                
+                                                    .popover {
+                                                      background-color: lightblue;
+                                                    }
+                                                
+                                                    .popover.bottom .arrow::after {
+                                                      border-bottom-color: lightblue;
+                                                    }
+                                                
+                                                    .popover-content {
+                                                      background-color: lightblue;
+                                                    }
+    #messagesubmit {
+      display: none;
+    }
+    #replysubmit {
+      display: none;
+    }
+    #reply1 {
+      display: none;
+    }
+    #reply2 {
+      display: none;
+    }
+    #reply3 {
+      display: none;
+    }
+    #reply4 {
+      display: none;
+    }
+    #reply5 {
+      display: none;
+    }
+    #reply6 {
+      display: none;
+    }
+    #reply7 {
+      display: none;
+    }
+    #reply8 {
+      display: none;
+    }
+    #reply9 {
+      display: none;
+    }
+    #reply10 {
+      display: none;
+    }
+    #reply11 {
+      display: none;
+    }
+    #reply12 {
+      display: none;
+    }
+    #reply13 {
+      display: none;
+    }
+    #show3reply1 {
+      display: none;
+    }
+    #show3reply2 {
+      display: none;
+    }
+    #show3reply3 {
+      display: none;
+    }
+    #show2reply1 {
+      display: none;
+    }
+    #show2reply2 {
+      display: none;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="cover">
+    <div class="cover-image" style="background-image : url('assets/booktrinbg.jpg')"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br>
+          <br>
+          <div class="wow zoomIn" style="visibility: visible;">
+            <span style="font-weight: bold; color: white; font-size: 50px; font-family: Roboto, Roboto;">Message Board</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/rose.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <font color="FFFFFF ">
+            <div class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <h1 class="text-center">FAN PAGE</h1>
+            </div>
+          </font>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <h2> <a href="messageboard.html#yourmessage" style="color:midnightblue" onclick="openmessage()">Write a Message</a> to your favorite pianist</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="top">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Bobby Yu</b></h3>
+            <p> Wowwwwww you’re so talented!!! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray"> 6 months ago </p>
+            <p><a onclick="openreply1()" style="color:midnightblue" href="messageboard.html#top">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply1()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply1()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment2">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Christina Dahl</b></h3>
+            <p> Loved seeing your performance at Carnegie Hall last year! I’ll definitely attend your performance there this June as well :) </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">5 months ago </p>
+            <p><a onclick="openreply2()" style="color:midnightblue" href="messageboard.html#comment2">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply2()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply2()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment3">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Josephine Anderson</b></h3>
+            <p> AHHHH JUST BOOKED TICKETS TO YOUR HOUSTON PERFORMANCE CAN’T WAIT TO SEE YOU!!!!!!!! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">5 months ago </p>
+            <p><a onclick="openreply3()" style="color:midnightblue" href="messageboard.html#comment3">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="reply3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply3()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply3()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment4">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Doug Paul</b></h3>
+            <p> Love your skill on the piano, I can’t wait to see you become one of the greatest pianists of our time. </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">5 months ago </p>
+            <p><a onclick="openreply4()" style="color:midnightblue" href="messageboard.html#comment4">Reply</a></p>
+          </div>
+          <div class="col-md-12" id="show3">
+            <p class="text-right"><a onclick="show3replies()" style="color:midnightblue" href="messageboard.html#comment4">Show 3 Replies</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="show3reply1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 text-right" style="">
+        </div>
+        <div class="col-md-8 text-left" style="">
+          <h3> <b>Shreya Patel</b></h3>
+          <p> <a style="color:dodgerblue">@Doug Paul</a> FACTS!!! TRINITY YOU ARE MY INSPIRATION! </p>
+        </div>
+        <div class="col-md-3 text-right" style="">
+          <br>
+          <p style="color:dimgray">4 months ago </p>
+          <p><a style="color:midnightblue" href="messageboard.html#show3reply1" onclick="openreply4()">Reply</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="show3reply2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 text-right" style="">
+        </div>
+        <div class="col-md-8 text-left" style="">
+          <h3> <b>Penny Spear</b></h3>
+          <p> <a style="color:dodgerblue">@Doug Paul</a>&nbsp;Honestlyyy! Love hearing you play! It really relaxes me when I’m studying or stressed out about school. </p>
+        </div>
+        <div class="col-md-3 text-right" style="">
+          <br>
+          <p style="color:dimgray">3 months ago </p>
+          <p><a onclick="openreply4()" style="color:midnightblue" href="messageboard.html#show3reply2">Reply</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="show3reply3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 text-right" style="">
+        </div>
+        <div class="col-md-8 text-left" style="">
+          <h3> <b>Regina Dean</b></h3>
+          <p> <a style="color:dodgerblue">@Penny Spear</a> I know right! Her music is heavenly. I’m saving up for her next concert!!! Can’t wait to see her! </p>
+        </div>
+        <div class="col-md-3 text-right" style="">
+          <br>
+          <p style="color:dimgray">2 months ago </p>
+          <p><a onclick="openreply4()" style="color:midnightblue" href="messageboard.html#show3reply3">Reply</a></p>
+        </div>
+        <div class="col-md-12">
+          <p class="text-right"><a onclick="hide3replies()" style="color:midnightblue" href="messageboard.html#comment4">Hide 3 Replies</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="reply4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply4()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply4()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment5">
+    <div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Christine García</b></h3>
+            <p> Su música es muy rica, me gustaria ver a usted muy pronto. Ojala que tengas un actuación en México! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray" contenteditable="true">4 months ago </p>
+            <p><a onclick="openreply5()" style="color:midnightblue" href="messageboard.html#comment5">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply5()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply5()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment6">
+    <div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Jackson Reddy</b></h3>
+            <p> I wish you would play more Jazz music on the piano… I’m kinda getting bored of all the classical. You are still good though.</p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">2 months ago </p>
+            <p><a onclick="openreply6()" style="color:midnightblue" href="messageboard.html#comment6">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment6sub1">
+    <div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 text-right" style="">
+          </div>
+          <div class="col-md-8 text-left" style="">
+            <h3> <b>Joeanne Brown</b></h3>
+            <p> <a style="color:dodgerblue">@Jackson Reddy</a>&nbsp;All her music is perfect!!! Let her play in whatever music style she pleases! </p>
+          </div>
+          <div class="col-md-3 text-right" style="">
+            <br>
+            <p style="color:dimgray">2 months ago </p>
+            <p><a onclick="openreply6()" style="color:midnightblue" href="messageboard.html#comment6sub1">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply6()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply6()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment7">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Ruth Betty</b></h3>
+            <p> Your pictures are so beautiful! Talented and pretty! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">2 months ago </p>
+            <p><a onclick="openreply7()" style="color:midnightblue" href="messageboard.html#comment7">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply7">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply7()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply7()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment8">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Lily Xiu</b></h3>
+            <p> 所有未来钢琴家的卓越典范 </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">1 month ago </p>
+            <p><a onclick="openreply8()" style="color:midnightblue" href="messageboard.html#comment8">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="reply8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply8()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply8()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment9">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Rand Kane</b></h3>
+            <p> Are your coffee mugs coming with any new designs? I bought the pink and white one but would love to expand my collection! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">1 month ago </p>
+            <p><a onclick="openreply9()" style="color:midnightblue" href="messageboard.html#comment9">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply9">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply9()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply9()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment10">
+    <div class="wow zoomIn                                                                                animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Jill Smith</b></h3>
+            <p contenteditable="true"> TRINITY I am definitely your number one FAN!!! Hope to catch you in Boston WHOOOOO!!! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray">1 month ago </p>
+            <p><a onclick="openreply10()" style="color:midnightblue" href="messageboard.html#comment10">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment10sub1">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 text-right" style="">
+          </div>
+          <div class="col-md-8 text-left" style="">
+            <h3> <b>Ben Wilden</b></h3>
+            <p> <a style="color:dodgerblue">@Jill Smith</a>&nbsp;Loved hearing you play in New Orleans last year. Guess you can say I’m the true FAN :) </p>
+          </div>
+          <div class="col-md-3 text-right" style="">
+            <br>
+            <p style="color:dimgray">3 weeks ago </p>
+            <p><a onclick="openreply10()" style="color:midnightblue" href="messageboard.html#comment10sub1">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply10">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply10()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply10()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment11">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Sally Henderson</b></h3>
+            <p> You are my daughter’s role model! Keep doing what you do and I’m sure you’ll inspire a whole new generation of piano players! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray"> 3 weeks ago </p>
+            <p><a onclick="openreply11()" style="color:midnightblue" href="messageboard.html#comment11">Reply</a></p>
+          </div>
+          <div class="col-md-12" id="show2">
+            <p class="text-right"><a onclick="show2replies()" style="color:midnightblue" href="messageboard.html#comment11">Show 2 Replies</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="show2reply1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 text-right" style="">
+        </div>
+        <div class="col-md-8 text-left" style="">
+          <h3> <b>Julio Parker</b></h3>
+          <p> <a style="color:dodgerblue">@Sally Henderson</a>&nbsp;I agree, she is very inspirational. If she sold FAN’s I would definitely buy one lol </p>
+        </div>
+        <div class="col-md-3 text-right" style="">
+          <br>
+          <p style="color:dimgray">2 weeks ago </p>
+          <p><a onclick="openreply11()" style="color:midnightblue" href="messageboard.html#show2reply1">Reply</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="show2reply2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 text-right" style="">
+        </div>
+        <div class="col-md-8 text-left" style="">
+          <h3> <b>Grace Lee</b></h3>
+          <p> <a style="color:dodgerblue">@Sally Henderson</a>&nbsp;AGREED 100%. The most skillful pianist of our time! Hope to be just like you one day :)</p>
+        </div>
+        <div class="col-md-3 text-right" style="">
+          <br>
+          <p style="color:dimgray">1 week ago </p>
+          <p><a onclick="openreply11()" style="color:midnightblue" href="messageboard.html#show2reply2">Reply</a></p>
+        </div>
+        <div class="col-md-12">
+          <p class="text-right"><a onclick="hide2replies()" style="color:midnightblue" href="messageboard.html#comment11">Hide 2 Replies</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply11">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply11()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply11()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment12">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Ross Cooper</b></h3>
+            <p contenteditable="true"> What’s your favorite piano piece? </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray"> 1 week ago </p>
+            <p><a onclick="openreply12()" style="color:midnightblue" href="messageboard.html#comment12">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply12">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply12()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply12()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image : url('assets/marblewhite.jpg') " id="comment13">
+    <div class="wow zoomIn" style="visibility: visible;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h3> <b>Neha Sekar</b></h3>
+            <p> Just bought your T-shirts for my whole family! It’ll be an honor watching you perform in Atlanta as your #1 FAN! </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <br>
+            <p style="color:dimgray"> 3 days ago </p>
+            <p><a onclick="openreply13()" style="color:midnightblue" href="messageboard.html#comment13">Reply</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-image: url(&quot;assets/marblewhite.jpg&quot;)" id="reply13">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" style="">
+          <img src="assets/marblewhite.jpg" class="img-responsive col-md-4">
+        </div>
+        <div class="col-md-11" style="">
+          <h2 class="text-left">Reply</h2>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="@Izzy Gray I totally agree"></textarea></div>
+          </form>
+          <div class="text-left">
+            <a href="messageboard.html#replysubmit">
+              <button style="background-image : url( 'assets/black.jpg')" onclick="submitreply13()">
+                <font color="FFFFFF ">Send</font>
+              </button></a>
+            <button style="background-image : url( 'assets/black.jpg')" onclick="cancelreply13()">
+              <font color="FFFFFF ">Cancel</font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image: url('assets/marblewhite.jpg')" id="replysubmit">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-12 text-left">
+          <h2> Your reply has been sent and is waiting for approval.</h2>
+          <a href="messageboard.html#top">
+            <button style="background-image : url( 'assets/black.jpg')" onclick="closereplysubmit()">
+              <font color="FFFFFF ">Close</font>
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center" style="background-image: url(&quot;assets/peach.jpg&quot;); display: block;" id="yourmessage">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="mx-auto col-lg-12 col-10" style="">
+          <br>
+          <h1>Write Your Message</h1>
+          <br>
+          <br>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Full Name</label> <input type="text" class="form-control" id="form16" placeholder="Kate Miller"> </div>
+            <div class="form-group"><label for="form17">Message</label>
+              <textarea class="form-control" id="form35" rows="3" placeholder="Your message"></textarea></div>
+          </form>
+          <div class="text-left">
+            <button style="background-image : url( 'assets/black.jpg')" onclick="submitmessage()">
+              <font color="FFFFFF ">Send</font>
+            </button>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/peach.jpg&quot;); display: none;" id="messagesubmit">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-left">
+          <h2> Your message has been sent and is waiting for approval.</h2>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="openmessage()">
+            <font color="FFFFFF ">Write Another Message</font>
+          </button>
+          <a href="messageboard.html#top">
+            <button style="background-image : url( 'assets/black.jpg')" onclick="">
+              <font color="FFFFFF ">Back to Top</font>
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" style="background-image : url('assets/gray.jpg') ">
+    <br>
+    <div class="col-md-4"></div>
+    <div class="col-md-1">
+      <a href="mailto:trinityfanmail@gmail.com" target="_blank " class="fa fa-envelope w-100 h-100 fa-4x" style="color:darkblue"></a>
+    </div>
+    <div class="col-md-1">
+      <a href="https://www.instagram.com/awkwardpellas/?hl=en" style="color:lightcoral" class="fa fa-instagram w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.nj.com/messenger-gazette/2017/04/winners_of_young_artist_competition_to_perform_at_carnegie_hall_on_friday.html" style="color:black" class="fa fa-newspaper-o w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.youtube.com/channel/UCEcT58Cql2YfCD7Ha2EBs1w" class="fa fa-youtube-play w-100 h-100 fa-4x" style="color:red" target="_blank "></a></div>
+    <br>
+    <br>
+    <br><br>
+  </div>
+  <footer style="background-image : url('assets/black.jpg') " class="section ">
+    <div class="container ">
+      <div class="row ">
+        <div class="col-sm-6 col-md-12 ">
+          <div class="section ">
+            <div class="container ">
+              <div class="row ">
+                <div class="col-md-12 text-center">
+                  <h2>
+                    <a href="index.html">
+                      <font color="FFFFFF ">Home</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="biography.html">
+                      <font color="FFFFFF ">About</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="tours-dates-tickets.html">
+                      <font color="FFFFFF ">Tours</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html">
+                      <font color="FFFFFF ">Shop</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html#cart">
+                      <font color="FFFFFF ">Cart</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="about-chapter.html">
+                      <font color="FFFFFF ">BRHS TSA</font>
+                    </a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js">
+  </script>
+  <script> var wow = new WOW({
+      boxClass: 'wow', // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset: 0, // distance to the element when triggering the animation (default is 0)
+      mobile: true, // trigger animations on mobile devices (default is true)
+      live: true, // act on asynchronously loaded content (default is true)
+      callback: function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null, // optional scroll container selector, otherwise use window,
+      resetAnimation: true, // reset animation on end (default is true)
+    });
+    wow.init();
+  </script>
+  <div class="navbar navbar-inverse navbar-fixed-top"></div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span>
+            <font color="FFFFFF">Home</font>
+          </span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="biography.html">Biography</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">Live Tours</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="tours-dates-tickets.html">Tour Dates and Tickets</a>
+              </li>
+              <li>
+                <a href="messageboard.html">Message Board</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">Shop</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="merchandise.html">Merchandise</a>
+              </li>
+              <li>
+                <a href="merchandise.html#downloads">Downloads</a>
+              </li>
+              <li>
+                <a href="merchandise.html#cart">Cart</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">BRHS TSA</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="about-chapter.html">About Chapter</a>
+              </li>
+              <li>
+                <a href="stem-courses.html">STEM Courses</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemelectives">STEM Electives</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemclubs">STEM Clubs</a>
+              </li>
+              <li>
+                <a href="club-advisor.html">Club Advisor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script style="">
+    function submitmessage() {
+      var x = document.getElementById("messagesubmit");
+      x.style.display = "block";
+      var y = document.getElementById("yourmessage");
+      y.style.display = "none";
+    }
+
+    function openmessage() {
+      var x = document.getElementById("messagesubmit");
+      x.style.display = "none";
+      var y = document.getElementById("yourmessage");
+      y.style.display = "block";
+    }
+
+    function submitreply1() {
+      var x = document.getElementById("reply1");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply2() {
+      var x = document.getElementById("reply2");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply3() {
+      var x = document.getElementById("reply3");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply4() {
+      var x = document.getElementById("reply4");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply5() {
+      var x = document.getElementById("reply5");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply6() {
+      var x = document.getElementById("reply6");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply7() {
+      var x = document.getElementById("reply7");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply8() {
+      var x = document.getElementById("reply8");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply9() {
+      var x = document.getElementById("reply9");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply10() {
+      var x = document.getElementById("reply10");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply11() {
+      var x = document.getElementById("reply11");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply12() {
+      var x = document.getElementById("reply12");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function submitreply13() {
+      var x = document.getElementById("reply13");
+      x.style.display = "none";
+      var y = document.getElementById("replysubmit");
+      y.style.display = "block";
+    }
+
+    function closereplysubmit() {
+      var x = document.getElementById("replysubmit");
+      x.style.display = "none";
+    }
+
+    function openreply1() {
+      var x = document.getElementById("reply1");
+      x.style.display = "block";
+    }
+
+    function cancelreply1() {
+      var x = document.getElementById("reply1");
+      x.style.display = "none";
+    }
+
+    function openreply2() {
+      var x = document.getElementById("reply2");
+      x.style.display = "block";
+    }
+
+    function cancelreply2() {
+      var x = document.getElementById("reply2");
+      x.style.display = "none";
+    }
+
+    function openreply3() {
+      var x = document.getElementById("reply3");
+      x.style.display = "block";
+    }
+
+    function cancelreply3() {
+      var x = document.getElementById("reply3");
+      x.style.display = "none";
+    }
+
+    function openreply4() {
+      var x = document.getElementById("reply4");
+      x.style.display = "block";
+    }
+
+    function cancelreply4() {
+      var x = document.getElementById("reply4");
+      x.style.display = "none";
+    }
+
+    function openreply5() {
+      var x = document.getElementById("reply5");
+      x.style.display = "block";
+    }
+
+    function cancelreply5() {
+      var x = document.getElementById("reply5");
+      x.style.display = "none";
+    }
+
+    function openreply6() {
+      var x = document.getElementById("reply6");
+      x.style.display = "block";
+    }
+
+    function cancelreply6() {
+      var x = document.getElementById("reply6");
+      x.style.display = "none";
+    }
+
+    function openreply7() {
+      var x = document.getElementById("reply7");
+      x.style.display = "block";
+    }
+
+    function cancelreply7() {
+      var x = document.getElementById("reply7");
+      x.style.display = "none";
+    }
+
+    function openreply8() {
+      var x = document.getElementById("reply8");
+      x.style.display = "block";
+    }
+
+    function cancelreply8() {
+      var x = document.getElementById("reply8");
+      x.style.display = "none";
+    }
+
+    function openreply9() {
+      var x = document.getElementById("reply9");
+      x.style.display = "block";
+    }
+
+    function cancelreply9() {
+      var x = document.getElementById("reply9");
+      x.style.display = "none";
+    }
+
+    function openreply10() {
+      var x = document.getElementById("reply10");
+      x.style.display = "block";
+    }
+
+    function cancelreply10() {
+      var x = document.getElementById("reply10");
+      x.style.display = "none";
+    }
+
+    function openreply11() {
+      var x = document.getElementById("reply11");
+      x.style.display = "block";
+    }
+
+    function cancelreply11() {
+      var x = document.getElementById("reply11");
+      x.style.display = "none";
+    }
+
+    function openreply12() {
+      var x = document.getElementById("reply12");
+      x.style.display = "block";
+    }
+
+    function cancelreply12() {
+      var x = document.getElementById("reply12");
+      x.style.display = "none";
+    }
+
+    function openreply13() {
+      var x = document.getElementById("reply13");
+      x.style.display = "block";
+    }
+
+    function cancelreply13() {
+      var x = document.getElementById("reply13");
+      x.style.display = "none";
+    }
+
+    function show3replies() {
+      var x = document.getElementById("show3");
+      x.style.display = "none";
+      var a = document.getElementById("show3reply1");
+      a.style.display = "block";
+      var b = document.getElementById("show3reply2");
+      b.style.display = "block";
+      var c = document.getElementById("show3reply3");
+      c.style.display = "block";
+    }
+
+    function hide3replies() {
+      var x = document.getElementById("show3");
+      x.style.display = "block";
+      var a = document.getElementById("show3reply1");
+      a.style.display = "none";
+      var b = document.getElementById("show3reply2");
+      b.style.display = "none";
+      var c = document.getElementById("show3reply3");
+      c.style.display = "none";
+    }
+
+    function show2replies() {
+      var x = document.getElementById("show2");
+      x.style.display = "none";
+      var a = document.getElementById("show2reply1");
+      a.style.display = "block";
+      var b = document.getElementById("show2reply2");
+      b.style.display = "block";
+    }
+
+    function hide2replies() {
+      var x = document.getElementById("show2");
+      x.style.display = "block";
+      var a = document.getElementById("show2reply1");
+      a.style.display = "none";
+      var b = document.getElementById("show2reply2");
+      b.style.display = "none";
+    }
+  </script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>

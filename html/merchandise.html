@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body style="" class="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <style style=""> body {
+                                                                                                                                                                                              font-family: 'Roboto', Roboto;
+                                                                                                                                                                                                font-size: 20px;
+                                                                                                                                                                                              }
+                                                                                           #bg {
+                                                                                                      background: url("origeditside.jpg") no-repeat center center;
+                                                                                                      height: 700px;
+                                                                                                      background-size: 100% auto;
+                                                                                                    }
+                                                                                                
+                                                                                                    .navbar-default .navbar-brand {
+                                                                                                      color: #FFF;
+                                                                                                    }
+                                                                                                .mySlides {
+                                                                                              display: none
+                                                                                            }
+                                                                                        
+                                                                                            .demo {
+                                                                                              cursor: pointer
+                                                                                            }
+                                                                                                    img[usemap] {
+                                                                                                      border: none;
+                                                                                                      height: auto;
+                                                                                                      max-width: 100%;
+                                                                                                      width: auto;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover {
+                                                                                                      background-color: lightblue;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover.bottom .arrow::after {
+                                                                                                      border-bottom-color: lightblue;
+                                                                                                    }
+                                                                                                
+                                                                                                    .popover-content {
+                                                                                                      background-color: lightblue;
+                                                                                                    }
+    #merchprod1 {
+      display: none;
+    }
+    #merchprod1add {
+      display: none;
+    }
+    #merchprod2 {
+      display: none;
+    }
+    #merchprod2add {
+      display: none;
+    }
+    #merchprod3 {
+      display: none;
+    }
+    #merchprod3add {
+      display: none;
+    }
+    #merchprod4 {
+      display: none;
+    }
+    #merchprod4add {
+      display: none;
+    }
+    #merchprod5 {
+      display: none;
+    }
+    #merchprod5add {
+      display: none;
+    }
+    #merchprod6 {
+      display: none;
+    }
+    #merchprod6add {
+      display: none;
+    }
+     #album1 {
+      display: none;
+    }
+    #album1cart {
+      display: none;
+    }
+    #album1add {
+      display: none;
+    }
+     #album2 {
+      display: none;
+    }
+    #album2cart {
+      display: none;
+    }
+    #album2add {
+      display: none;
+    }
+ 		#album3 {
+      display: none;
+    }
+    #album3cart {
+      display: none;
+    }
+    #album3add {
+      display: none;
+    }
+    #placeorder {
+    	display: none;
+    }
+    #ordermessage {
+    	display: none;
+    }
+    #nxt {
+    	display: none;
+    }
+ * {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+    </style>
+  <script> function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*create magnifier glass:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*insert magnifier glass:*/
+  img.parentElement.insertBefore(glass, img);
+  /*set background properties for the magnifier glass:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 2;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*execute a function when someone moves the magnifier glass over the image:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*prevent the magnifier glass from being positioned outside the image:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*set the position of the magnifier glass:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*display what the magnifier glass "sees":*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+  <div class="cover">
+    <div class="cover-image" style="background-image : url('assets/merchbg.jpg')"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br>
+          <br>
+          <div class="wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+            <span style="font-weight: bold; color: white; font-size: 50px; font-family: Roboto, Roboto;">MERCHANDISE</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') " id="merchshop">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-magnifier-container">
+            <img id="shirt" src="assets\shirt.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <h1 class="text-left">Cotton Long-Sleeve with Logo</h1>
+            <h2>Price: $35.00</h2>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buymerchprod1()">
+              <font color="FFFFFF ">ADD TO CART</font>
+            </button>
+            <h2 id="merchprod1add" style="display: none;"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>. </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') " id="merchshop">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-magnifier-container">
+            <img src="assets\totebag.jpg" class="img-responsive" id="tote"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <h1>Simple Cotton Fiber Tote Bag</h1>
+            <h2>Price: $15.00</h2>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buymerchprod2()">
+              <font color="FFFFFF ">ADD TO CART</font>
+            </button>
+            <h2 id="merchprod2add" style="display: none;"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-magnifier-container">
+            <img id="folder" src="assets\musicfolder.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <h1>Designer 3 Prong Sheet Music Folder</h1>
+            <h2>Price: $5.00</h2>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buymerchprod3()">
+              <font color="FFFFFF ">ADD TO CART</font>
+            </button>
+            <h2 id="merchprod3add"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-magnifier-container">
+            <img src="assets\pen.jpg" class="img-responsive" id="pen"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <h1>Pen with Logo</h1>
+            <h2>Price: $2.50</h2>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buymerchprod4()">
+              <font color="FFFFFF ">ADD TO CART</font>
+            </button>
+            <h2 id="merchprod4add"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-magnifier-container">
+            <img id="mug" src="assets\coffeemug.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <h1>Coffee Mug with Logo</h1>
+            <h2>Price: $15.00</h2>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buymerchprod5()">
+              <font color="FFFFFF ">ADD TO CART</font>
+            </button>
+            <h2 id="merchprod5add" style="display: none;"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url('assets/peach.jpg') ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-magnifier-container">
+            <img id="drawstring" src="assets\drawstringbag.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="wow fadeInUp" style="visibility: visible;">
+            <h1>Piano Drawstring Bag</h1>
+            <h2 contenteditable="true">Price: $10.00</h2>
+            <button style="background-image : url( 'assets/rose.jpg')" onclick="buymerchprod6()">
+              <font color="FFFFFF ">ADD TO CART</font>
+            </button>
+            <h2 id="merchprod6add" style="display: none;"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cover" id="downloads">
+    <div class="cover-image" style="background-image : url('assets/downloadbg.jpg')"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <br>
+          <br>
+          <div class="wow zoomIn animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated" style="visibility: hidden; animation-name: none;">
+            <span style="font-weight: bold; color: white; font-size: 50px; font-family: Roboto, Roboto;">Downloads</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image : url( 'assets/peach.jpg') " id="downloadshop">
+    <div class="wow fadeIn animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated animated" style="visibility: hidden; animation-name: none;">
+      <div class="container">
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="assets\album1.jpg" class="center-block img-square img-responsive">
+            <h3 class="text-center">Love Yourself and Music</h3>
+            <a href="merchandise.html#album1">
+              <button style="background-image : url( 'assets/rose.jpg')" onclick="viewalbum1()">
+                <font color="FFFFFF ">VIEW ALBUM</font>
+              </button></a>
+          </div>
+          <div class="col-md-4">
+            <img src="assets\album2.jpg" class="center-block img-square img-responsive">
+            <h3 class="text-center">School Music Affairs </h3>
+            <a href="merchandise.html#album2">
+              <button style="background-image : url( 'assets/rose.jpg')" onclick="viewalbum2()">
+                <font color="FFFFFF ">VIEW ALBUM</font>
+              </button></a>
+          </div>
+          <div class="col-md-4">
+            <img src="assets\album3.jpg" class="center-block img-square img-responsive">
+            <h3 class="text-center">Wings of Music</h3>
+            <a href="merchandise.html#album3">
+              <button style="background-image : url( 'assets/rose.jpg')" onclick="viewalbum3()">
+                <font color="FFFFFF ">VIEW ALBUM</font>
+              </button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/rose.jpg&quot;); display: none;" id="album1">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album1.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+          <h1>Love Yourself and Music Album</h1>
+          <h2>Price: $35.00</h2>
+          <h3>Song List:</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Summer Day</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Silver Forks</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Waste it on Us</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Fake Lovers</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. The Paradise</h3>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="buyalbum1cart()">
+            <font color="FFFFFF ">ADD TO CART</font>
+          </button>
+          <h2 id="album1add"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          <a href="merchandise.html#downloadshop"><button style="background-image : url( 'assets/black.jpg')" onclick="closealbum1()">
+              <font color="FFFFFF ">Close</font>
+            </button></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1>Summer Day</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/qaM-aqiIY-U" allowfullscreen="" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/rose.jpg&quot;); display: none;" id="album2">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album2.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+          <h1>School Music Affairs Album</h1>
+          <h2>Price: $35.00</h2>
+          <h3>Song List:</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Miss Wrong</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Girl in Love</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;Blood, Sweat Tears, and Hard Work</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;Cypher: Part Music</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Where You Going </h3>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="buyalbum2cart()">
+            <font color="FFFFFF ">ADD TO CART</font>
+          </button>
+          <h2 id="album2add"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          <a href="merchandise.html#downloadshop"><button style="background-image : url( 'assets/black.jpg')" onclick="closealbum2()">
+              <font color="FFFFFF ">Close</font>
+            </button></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1>Cypher: Part Music</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/tdfKQspF5xc" allowfullscreen="" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/rose.jpg&quot;); display: none;" id="album3">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets\album3.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+          <h1>Wings of Music Album</h1>
+          <h2>Price: $35.00</h2>
+          <h3>Song List:</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. RNA</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Anpanwoman</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Love Puzzle</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Magic Store</h3>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. MIC Pick-Up</h3>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="buyalbum3cart()">
+            <font color="FFFFFF ">ADD TO CART</font>
+          </button>
+          <h2 id="album3add"> Added! View <a href="merchandise.html#cart" style="color:midnightblue">Cart</a>.</h2>
+          <a href="merchandise.html#downloadshop"><button style="background-image : url( 'assets/black.jpg')" onclick="closealbum3()">
+              <font color="FFFFFF ">Close</font>
+            </button></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1>Love Puzzle</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/Uk3yU_mM6b0" allowfullscreen="" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-secondary" style="background-image : url('assets/gray.jpg') " id="cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <font color="FFFFFF ">
+            <br>
+            <span style="font-weight: bold; color: white; font-size: 50px; font-family: Roboto, Roboto;">CART</span>
+            <br>
+          </font>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); " id="emptycart">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>You have no items in your cart. <a href="merchandise.html#merchshop" style="color:midnightblue">Continue shopping.</a></h1>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="ordermessage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Transaction Completed</h1>
+          <h2> Thank you for ordering these items! Standard delivery takes 3-5 business days. Holidays are exceptions. We hope you enjoy these products!</h2>
+          <h2>
+            <a href="merchandise.html#merchshop" style="color:midnightblue">Continue shopping.</a>
+          </h2>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="merchprod1" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\shirt.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Cotton Long-Sleeve with Logo </h3>
+          <h3> Quantity: <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletemerchprod1()" id="deletep1">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="merchprod2" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\totebag.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Simple Cotton Fiber Tote Bag </h3>
+          <h3> Quantity: <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </h3>
+          <h3 class="text-right"> $15.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletemerchprod2()" id="deletep2">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);" id="merchprod3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\musicfolder.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Designer 3 Prong Sheet Music Folder </h3>
+          <h3> Quantity: <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </h3>
+          <h3 class="text-right"> $5.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletemerchprod3()" id="deletep3">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);" id="merchprod4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\pen.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Pen with Logo </h3>
+          <h3> Quantity: <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </h3>
+          <h3 class="text-right"> $2.50 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletemerchprod4()" id="deletep4">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="merchprod5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\coffeemug.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Coffee Mug with Logo </h3>
+          <h3> Quantity: <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </h3>
+          <h3 class="text-right"> $15.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletemerchprod5()" id="deletep5">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); display: none;" id="merchprod6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\drawstringbag.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Piano Drawstring Bag </h3>
+          <h3> Quantity: <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </h3>
+          <h3 class="text-right"> $10.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletemerchprod6()" id="deletep6">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="album1cart" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\album1.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Love Yourself and Music Album</h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletealbum1cart()" id="deletea1">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="album2cart" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\album2.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>School Music Affairs Album</h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletealbum2cart()" id="deletea2">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="album3cart" class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="assets\album3.jpg" class="img-responsive">
+        </div>
+        <div class="col-md-10">
+          <h3>Wings of Music Album</h3>
+          <h3 class="text-right"> $35.00 </h3>
+          <button style="background-image : url( 'assets/gray.jpg')" onclick="deletealbum3cart()" id="deletea3">
+            <font color="FFFFFF ">Delete</font>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span>
+            <font color="FFFFFF">Home</font>
+          </span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="biography.html">Biography</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">Live Tours</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="tours-dates-tickets.html">Tour Dates and Tickets</a>
+              </li>
+              <li>
+                <a href="messageboard.html">Message Board</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">Shop</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="merchandise.html">Merchandise</a>
+              </li>
+              <li>
+                <a href="merchandise.html#downloads">Downloads</a>
+              </li>
+              <li>
+                <a href="merchandise.html#cart">Cart</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" data-toggle="dropdown" aria-expanded="false">BRHS TSA</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li>
+                <a href="about-chapter.html">About Chapter</a>
+              </li>
+              <li>
+                <a href="stem-courses.html">STEM Courses</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemelectives">STEM Electives</a>
+              </li>
+              <li>
+                <a href="stem-courses.html#stemclubs">STEM Clubs</a>
+              </li>
+              <li>
+                <a href="club-advisor.html">Club Advisor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;);" id="placeorder">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <button style="background-image : url( 'assets/black.jpg')" onclick="placeordermessage()">
+            <font color="FFFFFF ">PLACE ORDER</font>
+          </button>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="cancelfinalorder()">
+            <font color="FFFFFF ">Cancel Order</font>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content" style="background-image : url('assets/marblewhite.jpg') ">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+                  <h3 class="modal-title">Transaction Completed</h3>
+                </div>
+                <div class="modal-body">
+                  <p>Thank you for ordering these items! Standard delivery takes 3-5 business days. Holidays are exceptions. We hope you enjoy these products!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background-image: url(&quot;assets/marblewhite.jpg&quot;); " id="nxt">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2> Ready to Order? </h2>
+          <button style="background-image : url( 'assets/black.jpg')" onclick="next()">
+            <font color="FFFFFF ">YES</font>
+          </button>
+          <a href="merchandise.html#merchshop">
+            <button style="background-image : url( 'assets/black.jpg')" onclick="">
+              <font color="FFFFFF ">Continue Shopping</font>
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script style="">
+    function buymerchprod1() {
+      var x = document.getElementById("merchprod1");
+      x.style.display = "block";
+      var y = document.getElementById("merchprod1add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletemerchprod1() {
+      var x = document.getElementById("merchprod1");
+      x.style.display = "none";
+      var y = document.getElementById("merchprod1add");
+      y.style.display = "none";
+    }
+
+    function buymerchprod2() {
+      var x = document.getElementById("merchprod2");
+      x.style.display = "block";
+      var y = document.getElementById("merchprod2add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletemerchprod2() {
+      var x = document.getElementById("merchprod2");
+      x.style.display = "none";
+      var y = document.getElementById("merchprod2add");
+      y.style.display = "none";
+    }
+
+    function buymerchprod3() {
+      var x = document.getElementById("merchprod3");
+      x.style.display = "block";
+      var y = document.getElementById("merchprod3add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletemerchprod3() {
+      var x = document.getElementById("merchprod3");
+      x.style.display = "none";
+      var y = document.getElementById("merchprod3add");
+      y.style.display = "none";
+    }
+
+    function buymerchprod4() {
+      var x = document.getElementById("merchprod4");
+      x.style.display = "block";
+      var y = document.getElementById("merchprod4add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletemerchprod4() {
+      var x = document.getElementById("merchprod4");
+      x.style.display = "none";
+      var y = document.getElementById("merchprod4add");
+      y.style.display = "none";
+    }
+
+    function buymerchprod5() {
+      var x = document.getElementById("merchprod5");
+      x.style.display = "block";
+      var y = document.getElementById("merchprod5add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletemerchprod5() {
+      var x = document.getElementById("merchprod5");
+      x.style.display = "none";
+      var y = document.getElementById("merchprod5add");
+      y.style.display = "none";
+    }
+
+    function buymerchprod6() {
+      var x = document.getElementById("merchprod6");
+      x.style.display = "block";
+      var y = document.getElementById("merchprod6add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletemerchprod6() {
+      var x = document.getElementById("merchprod6");
+      x.style.display = "none";
+      var y = document.getElementById("merchprod6add");
+      y.style.display = "none";
+    }
+
+    function viewalbum1() {
+      var x = document.getElementById("album1");
+      x.style.display = "block";
+    }
+
+    function closealbum1() {
+      var x = document.getElementById("album1");
+      x.style.display = "none";
+    }
+
+    function buyalbum1cart() {
+      var x = document.getElementById("album1cart");
+      x.style.display = "block";
+      var y = document.getElementById("album1add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletealbum1cart() {
+      var x = document.getElementById("album1cart");
+      x.style.display = "none";
+      var y = document.getElementById("album1add");
+      y.style.display = "none";
+    }
+
+    function viewalbum2() {
+      var x = document.getElementById("album2");
+      x.style.display = "block";
+    }
+
+    function closealbum2() {
+      var x = document.getElementById("album2");
+      x.style.display = "none";
+    }
+
+    function buyalbum2cart() {
+      var x = document.getElementById("album2cart");
+      x.style.display = "block";
+      var y = document.getElementById("album2add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletealbum2cart() {
+      var x = document.getElementById("album2cart");
+      x.style.display = "none";
+      var y = document.getElementById("album2add");
+      y.style.display = "none";
+    }
+
+    function viewalbum3() {
+      var x = document.getElementById("album3");
+      x.style.display = "block";
+    }
+
+    function closealbum3() {
+      var x = document.getElementById("album3");
+      x.style.display = "none";
+    }
+
+    function buyalbum3cart() {
+      var x = document.getElementById("album3cart");
+      x.style.display = "block";
+      var y = document.getElementById("album3add");
+      y.style.display = "block";
+      var z = document.getElementById("emptycart");
+      z.style.display = "none";
+      var order = document.getElementById("ordermessage");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+    }
+
+    function deletealbum3cart() {
+      var x = document.getElementById("album3cart");
+      x.style.display = "none";
+      var y = document.getElementById("album3add");
+      y.style.display = "none";
+    }
+
+    function next() {
+      var prod1 = document.getElementById("merchprod1");
+      var prod2 = document.getElementById("merchprod2");
+      var prod3 = document.getElementById("merchprod3");
+      var prod4 = document.getElementById("merchprod4");
+      var prod5 = document.getElementById("merchprod5");
+      var prod6 = document.getElementById("merchprod6");
+      var empty = document.getElementById("emptycart");
+      var album1 = document.getElementById("album1cart");
+      var album2 = document.getElementById("album2cart");
+      var album3 = document.getElementById("album3cart");
+      var order = document.getElementById("placeorder");
+      var nextsec = document.getElementById("nxt");
+      var dltp1 = document.getElementById("deletep1");
+      var dltp2 = document.getElementById("deletep2");
+      var dltp3 = document.getElementById("deletep3");
+      var dltp4 = document.getElementById("deletep4");
+      var dltp5 = document.getElementById("deletep5");
+      var dltp6 = document.getElementById("deletep6");
+      var dlta1 = document.getElementById("deletea1");
+      var dlta2 = document.getElementById("deletea2");
+      var dlta3 = document.getElementById("deletea3");
+      if (prod1.style.display == "none" && prod2.style.display == "none" && prod3.style.display == "none" && prod4.style.display == "none" && prod5.style.display == "none" && prod6.style.display == "none" && album1.style.display == "none" && album2.style.display == "none" && album3.style.display == "none") {
+        empty.style.display = "block";
+        nextsec.style.display = "block";
+      } else {
+        order.style.display = "block";
+        nextsec.style.display = "none";
+        dltp1.style.display = "none";
+        dltp2.style.display = "none";
+        dltp3.style.display = "none";
+        dltp4.style.display = "none";
+        dltp5.style.display = "none";
+        dltp6.style.display = "none";
+        dlta1.style.display = "none";
+        dlta2.style.display = "none";
+        dlta3.style.display = "none";
+      }
+    }
+
+    function cancelfinalorder() {
+      var order = document.getElementById("placeorder");
+      order.style.display = "none";
+      var nextsec = document.getElementById("nxt");
+      nextsec.style.display = "block";
+      var dltp1 = document.getElementById("deletep1");
+      dltp1.style.display = "block";
+      var dltp2 = document.getElementById("deletep2");
+      dltp2.style.display = "block";
+      var dltp3 = document.getElementById("deletep3");
+      dltp3.style.display = "block";
+      var dltp4 = document.getElementById("deletep4");
+      dltp4.style.display = "block";
+      var dltp5 = document.getElementById("deletep5");
+      dltp5.style.display = "block";
+      var dltp6 = document.getElementById("deletep6");
+      dltp6.style.display = "block";
+      var dlta1 = document.getElementById("deletea1");
+      dlta1.style.display = "block";
+      var dlta2 = document.getElementById("deletea2");
+      dlta2.style.display = "block";
+      var dlta3 = document.getElementById("deletea3");
+      dlta3.style.display = "block";
+    }
+
+    function placeordermessage() {
+      var finalorder = document.getElementById("ordermessage");
+      finalorder.style.display = "block";
+      var prod1 = document.getElementById("merchprod1");
+      prod1.style.display = "none";
+      var prod2 = document.getElementById("merchprod2");
+      prod2.style.display = "none";
+      var prod3 = document.getElementById("merchprod3");
+      prod3.style.display = "none";
+      var prod4 = document.getElementById("merchprod4");
+      prod4.style.display = "none";
+      var prod5 = document.getElementById("merchprod5");
+      prod5.style.display = "none";
+      var prod6 = document.getElementById("merchprod6");
+      prod6.style.display = "none";
+      var empty = document.getElementById("emptycart");
+      empty.style.display = "none";
+      var album1 = document.getElementById("album1cart");
+      album1.style.display = "none";
+      var album2 = document.getElementById("album2cart");
+      album2.style.display = "none";
+      var album3 = document.getElementById("album3cart");
+      album3.style.display = "none";
+      var prod1add = document.getElementById("merchprod1add");
+      prod1add.style.display = "none";
+      var prod2add = document.getElementById("merchprod2add");
+      prod2add.style.display = "none";
+      var prod3add = document.getElementById("merchprod3add");
+      prod3add.style.display = "none";
+      var prod4add = document.getElementById("merchprod4add");
+      prod4add.style.display = "none";
+      var prod5add = document.getElementById("merchprod5add");
+      prod5add.style.display = "none";
+      var prod6add = document.getElementById("merchprod6add");
+      prod6add.style.display = "none";
+      var album1add = document.getElementById("album1add");
+      album1add.style.display = "none";
+      var album2add = document.getElementById("album2add");
+      album2add.style.display = "none";
+      var album3add = document.getElementById("album3add");
+      album3add.style.display = "none";
+      var order = document.getElementById("placeorder");
+      order.style.display = "none";
+      var dltp1 = document.getElementById("deletep1");
+      dltp1.style.display = "block";
+      var dltp2 = document.getElementById("deletep2");
+      dltp2.style.display = "block";
+      var dltp3 = document.getElementById("deletep3");
+      dltp3.style.display = "block";
+      var dltp4 = document.getElementById("deletep4");
+      dltp4.style.display = "block";
+      var dltp5 = document.getElementById("deletep5");
+      dltp5.style.display = "block";
+      var dltp6 = document.getElementById("deletep6");
+      dltp6.style.display = "block";
+      var dlta1 = document.getElementById("deletea1");
+      dlta1.style.display = "block";
+      var dlta2 = document.getElementById("deletea2");
+      dlta2.style.display = "block";
+      var dlta3 = document.getElementById("deletea3");
+      dlta3.style.display = "block";
+    }
+    magnify("shirt", 1.5);
+    magnify("tote", 1.5);
+    magnify("pen", 1.5);
+    magnify("folder", 1.5);
+    magnify("mug", 1.5);
+    magnify("drawstring", 1.5);
+  </script>
+  <div class="text-center" style="background-image : url('assets/gray.jpg') ">
+    <br>
+    <div class="col-md-4"></div>
+    <div class="col-md-1">
+      <a href="mailto:trinityfanmail@gmail.com" target="_blank " class="fa fa-envelope w-100 h-100 fa-4x" style="color:darkblue"></a>
+    </div>
+    <div class="col-md-1">
+      <a href="https://www.instagram.com/awkwardpellas/?hl=en" style="color:lightcoral" class="fa fa-instagram w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.nj.com/messenger-gazette/2017/04/winners_of_young_artist_competition_to_perform_at_carnegie_hall_on_friday.html" style="color:black" class="fa fa-newspaper-o w-100 h-100 fa-4x" target="_blank "></a></div>
+    <div class="col-md-1">
+      <a href="https://www.youtube.com/channel/UCEcT58Cql2YfCD7Ha2EBs1w" class="fa fa-youtube-play w-100 h-100 fa-4x" style="color:red" target="_blank "></a></div>
+    <br>
+    <br>
+    <br><br>
+  </div>
+  <footer style="background-image : url('assets/black.jpg') " class="section ">
+    <div class="container ">
+      <div class="row ">
+        <div class="col-sm-6 col-md-12 ">
+          <div class="section ">
+            <div class="container ">
+              <div class="row ">
+                <div class="col-md-12 text-center">
+                  <h2>
+                    <a href="index.html">
+                      <font color="FFFFFF ">Home</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="biography.html">
+                      <font color="FFFFFF ">About</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="tours-dates-tickets.html">
+                      <font color="FFFFFF ">Tours</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html">
+                      <font color="FFFFFF ">Shop</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="merchandise.html#cart">
+                      <font color="FFFFFF ">Cart</font>
+                    </a>
+                    <font color="FFFFFF ">|</font>
+                    <a href="about-chapter.html">
+                      <font color="FFFFFF ">BRHS TSA</font>
+                    </a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js">
+  </script>
+  <script>
+    var wow = new WOW({
+      boxClass: 'wow', // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset: 0, // distance to the element when triggering the animation (default is 0)
+      mobile: true, // trigger animations on mobile devices (default is true)
+      live: true, // act on asynchronously loaded content (default is true)
+      callback: function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null, // optional scroll container selector, otherwise use window,
+      resetAnimation: true, // reset animation on end (default is true)
+    });
+    wow.init();
+  </script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
